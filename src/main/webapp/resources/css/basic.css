@@ -1,0 +1,105 @@
+* a:link, * a:focus, * a:active, * a:hover {
+    color: black;
+    background: none;
+    text-decoration: none;
+}
+* button:focus, * button:active, * button:hover {
+    outline: none;
+}
+* input:focus, * input:active, * input:hover {
+    outline: none;
+}
+* select:focus, * select:active, * select:hover {
+    outline: none;
+}
+
+.marginCenter {
+    margin : 0 auto;
+}
+.body {
+    margin: 0 auto;
+    width: 1400px;
+}
+.body_img {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.clear {
+    clear:both;
+}
+
+
+/* 메인 페이지 */
+.mainPage {
+    margin-bottom: 130px;
+    text-align: center;
+}
+.mainPage a {
+    color: black;
+}
+.mainPageList {
+    float: right;
+    width: 500px;
+    margin-right:100px;
+    padding: 30px 50px;
+    border: 1px solid #A200C7;
+}
+.mainPageText {
+    float: left;
+    width: 650px;
+    padding: 50px 40px;
+    border: 1px solid #A200C7;
+}
+.mainPageText a {
+    color: #A200C7;
+    font-weight: bold;
+    font-size: 20px;
+}
+.mainPageText b {
+    font-size: 18px;
+    padding-top:3px;
+    position: relative;
+}
+.mainPageButton {
+    width: 55px;
+    height: 55px;
+    border: 1px solid #a0a0a0;
+    background: rgba(255,255,255,0.7);
+}
+
+
+/* 설명 모달 */
+.info_body {
+    width: 55px;
+    height: 55px;
+    position:fixed;
+    top: 70px;
+    right: 50px;
+    border: 1px solid #a0a0a0;
+    background: rgba(255,255,255,0.7);
+}
+.info_body span {
+    font-weight: bold;
+}
+.info_modal {
+    padding: 30px;
+}
+.modal_divider {
+    width: 100%;
+    height: 2px;
+    background: #A0A0A0;
+}
+.info_closeBtn {
+    width: 120px;
+    height: 50px;
+    border: 1px solid #a0a0a0;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+.cp_text {
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}

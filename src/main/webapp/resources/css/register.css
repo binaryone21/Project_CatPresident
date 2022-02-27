@@ -1,0 +1,239 @@
+/* join 경로 내 jsp파일들이 사용하는 css입니다. */
+
+
+/* 네비 */
+.mb_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 23px;
+    margin-top : 50px;
+}
+.mb_text {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+
+/* Agree 이용약관 */
+.ag_body {
+    width: 1400px;
+    margin: 0 auto;
+}
+.ag_form {
+    margin : 40px 0;
+}
+.ag_title {
+    margin-left: 35px;
+    font-weight: bold;
+    font-size: 23px;
+}
+.ag_text {
+    border-radius: 5px;
+    border: 1px solid #acacac;
+    width : 1300px;
+    padding: 0 10px;
+    margin: 30px auto;
+    background : #dedede;
+}
+.ag_check {
+    text-align: right;
+    margin-right: 50px;
+}
+.ag_btn {
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+.ag_btn button {
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0 20px;
+    padding: 5px 10px;
+}
+.ag_okbtn {
+    background: #6060ff;
+}
+.ag_nobtn {
+    background: #ff6060;
+}
+.ag_btn button:hover {
+    color: black;
+}
+
+
+/* info 정보입력 */
+.in_form {
+    background: none;
+    border: none;
+    width: 450px;
+    margin: 50px auto;
+}
+.in_text {
+    margin-bottom : -10px;
+}
+.in_input {
+    width: 450px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #adb5bd;
+    padding-left: 15px;
+}
+.in_redStar {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 5px;
+}
+.in_zipInput {
+    clear: both;
+    background: #f3f3f3;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #adb5bd;
+    text-align: center;
+}
+.in_zipSpan {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin : 0 10px;
+}
+.in_zipbtn {
+    background: #a200c7;
+    border-radius: 5px;
+    width: 90px;
+    height: 40px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    margin-left: 15px;
+    text-align: center;
+}
+.in_alarm {
+    margin : 30px 0 0 10px;
+    color: grey;
+}
+.in_alarm input {
+    margin-right : 5px;
+}
+.in_btn {
+    text-align: center;
+    margin : 40px auto 60px auto;
+}
+.in_okbtn {
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    background: #A200C7;
+}
+
+
+/* Zip modal */
+.zip_closeBtn {
+    font-size: 30px;
+    margin : -10px;
+    outline: none;
+}
+.zip_closeBtn i {
+    position: relative;
+    top: -5px;
+}
+.zip_findText {
+    font-size: 14px;
+    color: #007BFF;
+    text-align: center;
+    margin-top: -20px;
+}
+.zip_list {
+    margin: 30px auto 0 auto;
+}
+
+
+/* joinOk 가입완료 */
+.jo_body {
+    margin: 150px 0 200px 250px;
+    width : 700px;
+    float : left;
+}
+.jo_btns {
+    float : left;
+    margin-left: 50px;
+    margin-top: 148px;
+}
+.jo_btns button {
+    background: #a200c7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 35px;
+    margin-bottom: 10px;
+}
+.jo_btns i {
+    position: relative;
+    top: -2px;
+    margin-right: 5px;
+}
+
+
+/* 로그인 */
+.li_form {
+    background: none;
+    border: none;
+    width: 450px;
+    margin: 50px auto;
+}
+.li_text {
+    margin-bottom : -10px;
+}
+.li_input {
+    width: 450px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #adb5bd;
+    padding-left: 15px;
+}
+.li_check {
+    text-align: center;
+    margin : 20px 0;
+    color : grey;
+}
+.li_btn {
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+.li_btn button {
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0 20px;
+    padding: 5px 10px;
+}
+.li_okbtn {
+    background: #6060ff;
+}
+.li_newbtn {
+    background: #d374e8;
+}
+.li_btn button:hover {
+    color: black;
+}
+.li_btn button:focus {
+    color: black;
+}
