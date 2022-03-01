@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class CatagoryController {
-    @Autowired
+/*    @Autowired
     // private CategoryService ctgrSrv;
 
     // 카테고리 페이지
@@ -16,5 +16,5 @@ public class CatagoryController {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("");
         return mav;
-    }
+    }*/
 }
