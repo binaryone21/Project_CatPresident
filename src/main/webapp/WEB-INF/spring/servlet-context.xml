@@ -8,9 +8,9 @@
     <mvc:annotation-driven/>
 
     <!-- SpringWas 컨테이너가 로그할 컴포넌트 경로 -->
-    <!--<context:component-scan base-package="seunghee.project.cat_president" />-->
+    <context:component-scan base-package="seunghee.project.cat_president" />
 
-    <mvc:resources mapping = "/resources/**" location="/resources/" />
+    <mvc:resources mapping = "/*" location="/resources/" />
 
     <!-- Tiles 설정 -->
     <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">

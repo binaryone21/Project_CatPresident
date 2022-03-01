@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Products">
+
+    <select id="TEST" statementType="PREPARED"
+            resultType="String">
+        ${target}
+    </select>
+
+    <!-- 카테고리 대분류 불러오기 -->
+    <select id="readBigCategory" statementType="PREPARED"
+            resultType="seunghee.project.cat_president.vo.CategoryVO">
+        select ctno, catename from Category
+            where ctno like '%00'
+                order by ctno;
+    </select>
+
+    <!-- 카테고리 전체 불러오기 -->
+    <select id="readCategoryList" statementType="PREPARED"
+            resultType="seunghee.project.cat_president.vo.CategoryVO">
+        select ctno, catename from Category
+            order by ctno;
+    </select>
+
+    <!-- 카테고리 타이틀 불러오기 -->
+    <select id="readCategoryCatename" statementType="PREPARED"
+            parameterType="String"
+            resultType="String">
+        select catename from Category where ctno = ${target}
+    </select>
+
+    <!-- 기획전, 노하우 게시물 리스트 읽어오기 -->
+    <select id="readBoardList" statementType="PREPARED"
+            resultType="seunghee.project.cat_president.vo.BoardVO">
+        select bno, title, contents, imgthum, tag from Board
+            where bgroup = ${bgroup}
+                order by bno desc;
+    </select>
+
+    <!-- 기획전, 노하우 게시물 읽어오기 -->
+    <select id="readBoardOne" statementType="PREPARED"
+            resultType="seunghee.project.cat_president.vo.BoardVO"
+            parameterType="String">
+        select * from Board
+            where bno = ${bno};
+    </select>
+
+    <!-- 기획전, 노하우 제품 리스트 불러오기-->
+    <select id="readBoardProducts" statementType="PREPARED"
+            resultType="String"
+            parameterType="String">
+        select Products from Board
+            where bno = ${bno}
+    </select>
+
+    <!-- 제품 목록 불러오기 -->
+    <select id="readProductsList" statementType="PREPARED"
+            parameterType="Map"
+            resultType="seunghee.project.cat_president.vo.ProductsVO">
+        select pno, pname, price, disco, totprice from Products
+            ${target} limit ${snum}, 30;
+     </select>
+
+    <!-- 제품 갯수 불러오기 -->
+    <select id="readCountProducts" statementType="PREPARED"
+            parameterType="String"
+            resultType="int">
+        select count(pno) from Products ${target}
+    </select>
+
+    <!-- 제품 목록 불러오기 -->
+    <select id="readStickerList" statementType="PREPARED"
+            parameterType="Map"
+            resultType="seunghee.project.cat_president.vo.ProductsVO">
+        select pno, pname, price, disco, totprice from Sticker
+            ${target} limit ${snum}, 30;
+     </select>
+
+    <!-- 제품 갯수 불러오기 -->
+    <select id="readCountSticker" statementType="PREPARED"
+            parameterType="String"
+            resultType="int">
+        select count(pno) from Sticker ${target}
+    </select>
+
+    <!-- 제품 하나 불러오기 -->
+    <select id="readProductsOne" statementType="PREPARED"
+            parameterType="String"
+            resultType="seunghee.project.cat_president.vo.ProductsVO">
+        select * from Products where pno = ${pno}
+    </select>
+</mapper>

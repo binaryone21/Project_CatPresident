@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Members">
+
+    <!-- 해당 아이디 존재 여부 확인 -->
+    <select id="checkUserID" statementType="PREPARED"
+            parameterType="String"
+            resultType="int">
+        select count(uno) from Members
+            where email like #{emforaddcat};
+    </select>
+
+    <!-- 주소 검색 -->
+    <select id="findZipcode" statementType="PREPARED"
+            parameterType="String"
+            resultType="seunghee.project.cat_president.vo.ZipCodeVO">
+        select zipcode, sido, gugun, dong, ri, bunji from zipcode
+            where dong like #{mydong};
+    </select>
+
+    <!-- 신규 회원 등록 -->
+    <insert id="addNewMember" statementType="PREPARED"
+            parameterType="seunghee.project.cat_president.vo.MembersVO">
+        insert into Members (username, email, passwd, zipcode, addr, alarm)
+            values (#{username}, #{email}, #{passwd}, #{zipcode}, #{addr},#{alarm});
+    </insert>
+
+    <!-- 로그인 -->
+    <select id="readMemberOne" statementType="PREPARED"
+            parameterType="seunghee.project.cat_president.vo.MembersVO"
+            resultType="seunghee.project.cat_president.vo.MembersVO">
+        select * from Members
+            where email = #{email} and passwd = #{passwd};
+    </select>
+
+
+
+
+
+
+
+
+
+    <select id="checkuid" statementType="PREPARED" parameterType="String" resultType="int">
+        select count(email) cnt from Members where email like #{email};
+    </select>
+
+    <update id="modifyuser" statementType="PREPARED" parameterType="seunghee.project.cat_president.vo.MembersVO">
+        update Members set phone = #{phone}, passwd = #{passwd} where uno = #{uno};
+    </update>
+
+</mapper>
