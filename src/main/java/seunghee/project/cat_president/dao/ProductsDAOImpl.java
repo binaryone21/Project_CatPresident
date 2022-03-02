@@ -16,24 +16,6 @@ public class ProductsDAOImpl implements ProductsDAO {
     @Autowired
     private SqlSession sqlSession;
 
-    // 카테고리 대분류 읽어오기
-    @Override
-    public List<CategoryVO> selectBigCategory() {
-        return sqlSession.selectList("Products.readBigCategory");
-    }
-
-    // 카테고리 전체 읽어오기
-    @Override
-    public List<CategoryVO> selectCategoryList() {
-        return sqlSession.selectList("Products.readCategoryList");
-    }
-
-    // 카테고리 타이틀 읽어오기
-    @Override
-    public String selectCategoryCatename(String target) {
-        return sqlSession.selectOne("Products.readCategoryCatename", target);
-    }
-
     // 기획전, 노하우 게시물 리스트 읽어오기
     @Override
     public List<BoardVO> selectBoardList(String bgroup) {

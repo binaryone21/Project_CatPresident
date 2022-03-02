@@ -8,15 +8,6 @@ import java.util.List;
 
 public interface ProductsService {
 
-    // 카테고리 대분류 읽어오기
-    List<CategoryVO> readBigCategory();
-
-    // 카테고리 전체 읽어오기
-    List<CategoryVO> readCategoryList();
-
-    // 카테고리 타이틀 읽어오기
-    String readCategoryCatename(String target);
-
     // 기획전, 노하우 게시물 리스트 읽어오기
     List<BoardVO> readBoardList(String bgroup);
 

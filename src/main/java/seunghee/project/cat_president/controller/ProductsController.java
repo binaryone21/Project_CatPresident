@@ -12,34 +12,6 @@ public class ProductsController {
     @Autowired
     private ProductsService pdsrv;
 
-    // 카테고리 페이지
-    @GetMapping("/category/page")
-    public ModelAndView Category(ModelAndView mv) {
-        mv.setViewName("products/category_page.tiles");
-        mv.addObject("cates", pdsrv.readBigCategory());
-        return mv;
-    }
-
-    // 카테고리 리스트
-    @GetMapping("/category/list")
-    public ModelAndView CategoryList(ModelAndView mv, String cate, String order, String cp) {
-        mv.setViewName("products/category_list.tiles");
-        // 카테고리 목록
-        mv.addObject("cates",pdsrv.readCategoryList());
-
-        // 카테고리 타이틀
-        mv.addObject("ct_title", pdsrv.readCategoryCatename(cate));
-
-        // 조건 정리
-        String need1 = pdsrv.categoryNeed(cate);
-        String need2 = pdsrv.orderNeed(order);
-        String target = need1 + need2;
-
-        mv.addObject("PDs", pdsrv.readProductsList(cp, target));
-        mv.addObject("PDCount", pdsrv.readCountProducts(target));
-
-        return mv;
-    }
 
     // 기획전 페이지
     @GetMapping("/planned/page")
@@ -81,7 +53,7 @@ public class ProductsController {
     @GetMapping("/today's/list")
     public ModelAndView TodayDealsList(ModelAndView mv) {
         mv.setViewName("products/list_today.tiles");
-        mv.addObject("cates", pdsrv.readBigCategory());
+        // mv.addObject("cates", pdsrv.readBigCategory());
         mv.addObject("PDs", pdsrv.readBoardProducts("2"));
         mv.addObject("PDCount", pdsrv.readBoardProducts("2").size());
         return mv;
@@ -97,7 +69,7 @@ public class ProductsController {
         String need2 = pdsrv.orderNeed(order);
         String target = need1 + need2;
 
-        mv.addObject("cates", pdsrv.readBigCategory());
+        // mv.addObject("cates", pdsrv.readBigCategory());
         mv.addObject("PDs", pdsrv.readProductsList("1", target));
         mv.addObject("PDCount", pdsrv.readProductsList("1", target).size());
         return mv;
@@ -113,7 +85,7 @@ public class ProductsController {
         String need2 = pdsrv.orderNeed(order);
         String target = need1 + need2;
 
-        mv.addObject("cates", pdsrv.readBigCategory());
+        // mv.addObject("cates", pdsrv.readBigCategory());
         mv.addObject("PDs", pdsrv.readProductsList(cp, target));
         mv.addObject("PDCount", pdsrv.readCountProducts(need1));
         return mv;
@@ -129,7 +101,7 @@ public class ProductsController {
         String need2 = pdsrv.orderNeed(order);
         String target = need1 + need2;
 
-        mv.addObject("cates", pdsrv.readBigCategory());
+        // mv.addObject("cates", pdsrv.readBigCategory());
         mv.addObject("PDs", pdsrv.readStickerList(cp, target));
         mv.addObject("PDCount", pdsrv.readCountSticker(need1));
         return mv;
@@ -146,7 +118,7 @@ public class ProductsController {
         String need3 = pdsrv.orderNeed(order);
         String target = need1 + need2 + need3;
 
-        mv.addObject("cates", pdsrv.readBigCategory());
+        // mv.addObject("cates", pdsrv.readBigCategory());
         mv.addObject("PDs", pdsrv.readProductsList(cp, target));
         mv.addObject("PDCount", pdsrv.readCountProducts(need1+need2));
         return mv;

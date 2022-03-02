@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ctgrMap">
+    <!-- 카테고리 대분류 불러오기 -->
+    <select id="voListCategory"
+            statementType="PREPARED"
+            resultType="seunghee.project.cat_president.vo.CategoryVO">
+        select
+            TC_PK,
+            TC_CLASS1,
+            TC_CLASS2,
+            TC_CLASS_NAME
+                from T_CATEGORY
+                    where TC_CLASS2 = '00'
+                        order by TC_PK
+    </select>
+
+            <!-- 카테고리 전체 불러오기 -->
+    <select id="readCategoryList" statementType="PREPARED"
+            resultType="seunghee.project.cat_president.vo.CategoryVO">
+    select ctno, catename from Category
+    order by ctno;
+    </select>
+
+            <!-- 카테고리 타이틀 불러오기 -->
+    <select id="readCategoryCatename" statementType="PREPARED"
+            parameterType="String"
+            resultType="String">
+    select catename from Category where ctno = ${target}
+    </select>
+</mapper>

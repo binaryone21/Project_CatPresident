@@ -19,24 +19,6 @@ public class ProductsServiceImpl implements ProductsService {
     @Autowired
     private ProductsDAO pddao;
 
-    // 카테고리 대분류 읽어오기
-    @Override
-    public List<CategoryVO> readBigCategory() {
-        return pddao.selectBigCategory();
-    }
-
-    // 카테고리 전체 읽어오기
-    @Override
-    public List<CategoryVO> readCategoryList() {
-        return pddao.selectCategoryList();
-    }
-
-    // 카테고리 타이틀 읽어오기
-    @Override
-    public String readCategoryCatename(String target) {
-        return pddao.selectCategoryCatename(target);
-    }
-
     // 기획전, 노하우 게시물 리스트 읽어오기
     @Override
     public List<BoardVO> readBoardList(String bgroup) {

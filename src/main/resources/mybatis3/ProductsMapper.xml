@@ -10,28 +10,6 @@
         ${target}
     </select>
 
-    <!-- 카테고리 대분류 불러오기 -->
-    <select id="readBigCategory" statementType="PREPARED"
-            resultType="seunghee.project.cat_president.vo.CategoryVO">
-        select ctno, catename from Category
-            where ctno like '%00'
-                order by ctno;
-    </select>
-
-    <!-- 카테고리 전체 불러오기 -->
-    <select id="readCategoryList" statementType="PREPARED"
-            resultType="seunghee.project.cat_president.vo.CategoryVO">
-        select ctno, catename from Category
-            order by ctno;
-    </select>
-
-    <!-- 카테고리 타이틀 불러오기 -->
-    <select id="readCategoryCatename" statementType="PREPARED"
-            parameterType="String"
-            resultType="String">
-        select catename from Category where ctno = ${target}
-    </select>
-
     <!-- 기획전, 노하우 게시물 리스트 읽어오기 -->
     <select id="readBoardList" statementType="PREPARED"
             resultType="seunghee.project.cat_president.vo.BoardVO">
