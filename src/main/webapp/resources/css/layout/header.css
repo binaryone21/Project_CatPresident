@@ -1,0 +1,99 @@
+.hd_main {
+    width: 1400px;
+    margin: 20px auto 0 auto;
+}
+
+/* 고양이 대통령 로고 */
+.hd_logo {
+    float: left;
+    width: 190px;
+    height: 60px;
+    padding-top: 5px;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 7px;
+}
+
+/* 검색창 */
+.hd_search {
+    float: left;
+    max-width: 580px;
+    height: 50px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: 2px solid #A200C7;
+}
+.hd_search input {
+    height: 45px;
+    padding-left: 15px;
+    border: none;
+    background: none;
+}
+.hd_search button {
+    width: 50px;
+    font-size: 20px;
+    background: #A200C7;
+    color: white;
+}
+.hd_search button i {
+    position: relative;
+    top: -3px;
+    right: -2px;
+}
+
+/* 알람, 마이페이지, 장바구니 */
+.hd_btns {
+    float: right;
+    width: 300px;
+    height: 60px;
+    text-align: center;
+}
+.hd_dropdown:hover .hd_dropdown {
+    display: block;
+    margin-top: 28px;
+}
+.hd_btnTitle {
+    width: 50px;
+    height: 22px;
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+}
+.hd_btnBody {
+    width : 250px;
+    margin-left: -75px;
+    font-size: 14px;
+}
+.hd_btnTextEvent {
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.hd_btnLogin {
+    width: 200px;
+    margin: 0px auto 10px auto;
+    text-align: center;
+    border: 1px solid #A200C7;
+    background: #A200C7;
+    color: white;
+}
+.hd_btnSignUp {
+    width: 200px;
+    margin: 0px auto 10px auto;
+    text-align: center;
+    border: 1px solid #A200C7;
+    background: none;
+    color: #A200C7;
+}
+
+.hd_btnBody div:hover {
+    color: #A200C7;
+    text-decoration: none;
+}
+.hd_btnIcon {
+    font-size: 25px;
+    width: 25px;
+}
+
+
+
